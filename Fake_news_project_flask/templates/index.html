@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fake News Detector</title>
+  </head>
+  <body>
+    <div>
+      <h1>Fake News Detector</h1>
+      <form action="/predict" method="post">
+        <label for="text">Enter some news text:</label>
+        <input type="text" id="text" name="text"><br><br>
+        <input type="submit" value="Predict"><br><br>
+      </form>
+      {% if prediction %}
+        <p>The given statement is {{ prediction }}.</p>
+        <p>The truth probability score is {{ prob }}.</p>
+      {% endif %}
+    </div>
+    
+  </body>
+</html>
